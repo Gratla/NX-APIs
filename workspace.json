@@ -1,6 +1,57 @@
 {
   "version": 2,
-  "projects": {},
+  "projects": {
+    "command-api": {
+      "root": "apps/command-api",
+      "projectType": "application",
+      "sourceRoot": "apps/command-api/src",
+      "targets": {
+        "build": {
+          "executor": "@jnxplus/nx-boot-gradle:build",
+          "options": {
+            "packaging": "jar"
+          }
+        },
+        "serve": {
+          "executor": "@jnxplus/nx-boot-gradle:serve"
+        },
+        "lint": {
+          "executor": "@jnxplus/nx-boot-gradle:lint",
+          "options": {
+            "linter": "checkstyle"
+          }
+        },
+        "test": {
+          "executor": "@jnxplus/nx-boot-gradle:test"
+        }
+      }
+    },
+    "event-api": {
+      "root": "apps/event-api",
+      "projectType": "application",
+      "sourceRoot": "apps/event-api/src",
+      "targets": {
+        "build": {
+          "executor": "@jnxplus/nx-boot-gradle:build",
+          "options": {
+            "packaging": "jar"
+          }
+        },
+        "serve": {
+          "executor": "@jnxplus/nx-boot-gradle:serve"
+        },
+        "lint": {
+          "executor": "@jnxplus/nx-boot-gradle:lint",
+          "options": {
+            "linter": "checkstyle"
+          }
+        },
+        "test": {
+          "executor": "@jnxplus/nx-boot-gradle:test"
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   }

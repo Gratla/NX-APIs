@@ -1,0 +1,17 @@
+
+pluginManagement {
+  plugins {
+    id 'org.springframework.boot' version "$springBootVersion"
+    id 'io.spring.dependency-management' version "$dependencyManagementVersion"
+    id 'org.jetbrains.kotlin.jvm' version "$kotlinJvmVersion"
+    id 'org.jetbrains.kotlin.plugin.spring' version "$kotlinSpringVersion"
+  }
+}
+
+rootProject.name = 'spring-apis'
+include('apps:event-api')
+include('apps:command-api')
+include('apps:query-api')
+
+
+
